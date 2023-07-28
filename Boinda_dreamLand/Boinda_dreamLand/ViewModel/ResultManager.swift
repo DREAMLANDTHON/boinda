@@ -12,7 +12,7 @@ import SwiftUI
 class ResultManager: ObservableObject {
 
     @Published var resultObjectName: String = ""
-    @Published var isDetacting = true
+    @Published var isDetecting = true
 }
 
 
