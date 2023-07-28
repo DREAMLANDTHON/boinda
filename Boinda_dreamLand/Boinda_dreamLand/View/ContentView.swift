@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("onboarding") var isOnboarindViewActive: Bool = true
+    
     var body: some View {
-        VStack {
-            Spacer()
-//            Text("\(ViewController.string[0])")
-            ViewRepresenter()
-        }
-        .ignoresSafeArea()
+       OnboardingView()
     }
 }
-
 struct ViewRepresenter: UIViewRepresentable {
     @StateObject var vc = CameraViewModel()
     

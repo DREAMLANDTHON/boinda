@@ -14,7 +14,7 @@ struct SettingView: View {
     @State var displayAccessibility: Bool = false
     
     @State var allergy: Bool = false
-
+    
     let allergyList: [String] = ["메밀", "밀", "대두", "견과류", "육류", "갑각류", "복숭아", "토마토", "난류", "우유", "조개류", "굴, 전복", "아황산류", "달걀", "닭고기"]
     let allergyGrid: [GridItem] = Array(repeating: .init(.flexible()), count: 5)
     
@@ -38,7 +38,7 @@ struct SettingView: View {
                 Toggle(isOn: $allergy) {
                     Text("알레르기 필터")
                 }
-
+                
                 if allergy {
                     LazyVGrid(columns: allergyGrid, alignment: .leading, spacing: 0) {
                         ForEach(0..<allergyList.count) { idx in
