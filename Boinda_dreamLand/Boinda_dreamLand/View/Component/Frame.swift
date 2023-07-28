@@ -11,7 +11,6 @@ struct Frame: View {
     /**
      Frame(isDetecting: $isDetecting)
      */
-    
     @EnvironmentObject var resultManager: ResultManager
     
     var body: some View {

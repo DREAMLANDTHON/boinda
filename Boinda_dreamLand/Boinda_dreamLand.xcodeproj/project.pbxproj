@@ -18,6 +18,7 @@
 		0DAAD7842A73CEC100BC23DB /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7832A73CEC100BC23DB /* ResultManager.swift */; };
 		0DAAD78B2A742D8D00BC23DB /* gorebab.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD78A2A742D8D00BC23DB /* gorebab.mlmodel */; };
 		0DAAD7902A74346300BC23DB /* HapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD78F2A74346300BC23DB /* HapticHelper.swift */; };
+
 		0DAAD7932A743EAA00BC23DB /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7922A743EAA00BC23DB /* Frame.swift */; };
 		0DAAD7952A743EAF00BC23DB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7942A743EAF00BC23DB /* Navigator.swift */; };
 		0DF6CFD42A744069007DF515 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF6CFD32A744069007DF515 /* SettingView.swift */; };
