@@ -11,7 +11,11 @@ import SwiftUI
 //hashmap
 class ResultManager: ObservableObject {
 
-    @Published var resultObjectName: String = ""
+    
+
+    static let shared = ResultManager()
+    private init() {}
+    @Published var resultObjectName: String = "탐지된 음식"
     @Published var isDetecting = true
 }
 

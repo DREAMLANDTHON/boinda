@@ -12,29 +12,30 @@ import Vision
 class CameraViewModel: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
     private var permissionGranted = false
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
-    let resultManager = ResultManager()
+    let resultManager = ResultManager.shared
     var count = 0
     var objectIdentifier = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
         checkPermission()
-        
         sessionQueue.async {
             [unowned self] in
                 guard permissionGranted else { return }
                 self.startCamera()
         }
+        
     }
     
     func configObject() {
         if count > 7 {
-            resultManager.resultObjectName = objectIdentifier
-            print("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
-            print("\(objectIdentifier)")
-            count = 0
-            HapticManager.shared.notification(type: .success)
-            resultManager.isDetecting = false
+            DispatchQueue.main.async {
+                self.resultManager.resultObjectName = self.objectIdentifier
+                self.count = 0
+                HapticManager.shared.notification(type: .success)
+//                self.resultManager.isDetecting = false
+            }
         }
     }
     
@@ -42,12 +43,13 @@ class CameraViewModel: UIViewController, AVCaptureVideoDataOutputSampleBufferDel
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
         guard let pixBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        guard let model = try? VNCoreMLModel(for: gorebab(configuration: MLModelConfiguration()).model) else {return}
+        guard let model = try? VNCoreMLModel(for: coca(configuration: MLModelConfiguration()).model) else {return}
         let request = VNCoreMLRequest(model: model) { (res, error) in
             guard let results = res.results as? [VNClassificationObservation] else { return }
             guard let observationData = results.first else { return }
-            if observationData.confidence > 0.9975, observationData.identifier == self.objectIdentifier, self.resultManager.isDetecting {
+            if observationData.confidence > 0.9975, observationData.identifier == self.objectIdentifier {
                 self.count += 1
+                self.objectIdentifier = observationData.identifier
                 self.configObject()
             } else {
                 self.objectIdentifier = observationData.identifier
@@ -96,6 +98,7 @@ class CameraViewModel: UIViewController, AVCaptureVideoDataOutputSampleBufferDel
         DispatchQueue.main.async {
             self.view.layer.addSublayer(previewLayer)
             previewLayer.frame = self.view.frame
+            
         }
         
         let dataOutput = AVCaptureVideoDataOutput()
@@ -103,5 +106,14 @@ class CameraViewModel: UIViewController, AVCaptureVideoDataOutputSampleBufferDel
         captureSession.addOutput(dataOutput)
         captureSession.startRunning()
     }
+
+//MARK: - UI
+    private func configUI() {
+        NSLayoutConstraint.activate([
+            view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
+            view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9)
+        ])
+    }
+    
     
 }

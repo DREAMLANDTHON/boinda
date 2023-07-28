@@ -15,14 +15,15 @@
 		0DAAD76F2A73B3B000BC23DB /* Boinda_dreamLandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD76E2A73B3B000BC23DB /* Boinda_dreamLandUITests.swift */; };
 		0DAAD7712A73B3B000BC23DB /* Boinda_dreamLandUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7702A73B3B000BC23DB /* Boinda_dreamLandUITestsLaunchTests.swift */; };
 		0DAAD77E2A73B44400BC23DB /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD77D2A73B44400BC23DB /* CameraViewModel.swift */; };
-		0DAAD7822A73B47B00BC23DB /* Dream.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7812A73B47B00BC23DB /* Dream.mlmodel */; };
 		0DAAD7842A73CEC100BC23DB /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7832A73CEC100BC23DB /* ResultManager.swift */; };
-		0DAAD7892A742C1C00BC23DB /* chapssal.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7882A742C1C00BC23DB /* chapssal.mlmodel */; };
 		0DAAD78B2A742D8D00BC23DB /* gorebab.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD78A2A742D8D00BC23DB /* gorebab.mlmodel */; };
-		0DAAD78D2A742E8E00BC23DB /* gorechange.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD78C2A742E8E00BC23DB /* gorechange.mlmodel */; };
 		0DAAD7902A74346300BC23DB /* HapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD78F2A74346300BC23DB /* HapticHelper.swift */; };
-		62017B842A743968005AE905 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62017B822A743968005AE905 /* Frame.swift */; };
-		62017B852A743968005AE905 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62017B832A743968005AE905 /* Navigator.swift */; };
+		0DAAD7932A743EAA00BC23DB /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7922A743EAA00BC23DB /* Frame.swift */; };
+		0DAAD7952A743EAF00BC23DB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7942A743EAF00BC23DB /* Navigator.swift */; };
+		0DF6CFD42A744069007DF515 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF6CFD32A744069007DF515 /* SettingView.swift */; };
+		0DF6CFD72A744106007DF515 /* CGSize+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF6CFD62A744106007DF515 /* CGSize+Ext.swift */; };
+		0DF6CFDB2A746832007DF515 /* coca.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DF6CFDA2A746832007DF515 /* coca.mlmodel */; };
+		0DF6CFDF2A746EF9007DF515 /* menu.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0DF6CFDE2A746EF8007DF515 /* menu.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,14 +55,15 @@
 		0DAAD76E2A73B3B000BC23DB /* Boinda_dreamLandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boinda_dreamLandUITests.swift; sourceTree = "<group>"; };
 		0DAAD7702A73B3B000BC23DB /* Boinda_dreamLandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boinda_dreamLandUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0DAAD77D2A73B44400BC23DB /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
-		0DAAD7812A73B47B00BC23DB /* Dream.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Dream.mlmodel; sourceTree = "<group>"; };
 		0DAAD7832A73CEC100BC23DB /* ResultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultManager.swift; sourceTree = "<group>"; };
-		0DAAD7882A742C1C00BC23DB /* chapssal.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = chapssal.mlmodel; sourceTree = "<group>"; };
 		0DAAD78A2A742D8D00BC23DB /* gorebab.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = gorebab.mlmodel; sourceTree = "<group>"; };
-		0DAAD78C2A742E8E00BC23DB /* gorechange.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = gorechange.mlmodel; sourceTree = "<group>"; };
 		0DAAD78F2A74346300BC23DB /* HapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHelper.swift; sourceTree = "<group>"; };
-		62017B822A743968005AE905 /* Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Frame.swift; path = ../../../../../boinda222222/Boinda_dreamLand/Boinda_dreamLand/Components/Frame.swift; sourceTree = "<group>"; };
-		62017B832A743968005AE905 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Navigator.swift; path = ../../../../../boinda222222/Boinda_dreamLand/Boinda_dreamLand/Components/Navigator.swift; sourceTree = "<group>"; };
+		0DAAD7922A743EAA00BC23DB /* Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
+		0DAAD7942A743EAF00BC23DB /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		0DF6CFD32A744069007DF515 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0DF6CFD62A744106007DF515 /* CGSize+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Ext.swift"; sourceTree = "<group>"; };
+		0DF6CFDA2A746832007DF515 /* coca.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = coca.mlmodel; sourceTree = "<group>"; };
+		0DF6CFDE2A746EF8007DF515 /* menu.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menu.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +114,14 @@
 		0DAAD7522A73B3AE00BC23DB /* Boinda_dreamLand */ = {
 			isa = PBXGroup;
 			children = (
+				0DF6CFD52A7440F4007DF515 /* Ext+ */,
 				0DAAD7852A73D15600BC23DB /* Model */,
 				0DAAD7802A73B44D00BC23DB /* ViewModel */,
 				0DAAD77F2A73B44900BC23DB /* View */,
 				0DAAD7532A73B3AE00BC23DB /* Boinda_dreamLandApp.swift */,
+				0DF6CFDE2A746EF8007DF515 /* menu.svg */,
+				0DF6CFDA2A746832007DF515 /* coca.mlmodel */,
 				0DAAD78A2A742D8D00BC23DB /* gorebab.mlmodel */,
-				0DAAD7812A73B47B00BC23DB /* Dream.mlmodel */,
-				0DAAD78C2A742E8E00BC23DB /* gorechange.mlmodel */,
-				0DAAD7882A742C1C00BC23DB /* chapssal.mlmodel */,
 				0DAAD7572A73B3B000BC23DB /* Assets.xcassets */,
 				0DAAD7592A73B3B000BC23DB /* Preview Content */,
 			);
@@ -154,8 +156,9 @@
 		0DAAD77F2A73B44900BC23DB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				62017B812A743934005AE905 /* Component */,
 				0DAAD7552A73B3AE00BC23DB /* ContentView.swift */,
+				0DF6CFD32A744069007DF515 /* SettingView.swift */,
+				0DAAD7912A743EA100BC23DB /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,13 +188,21 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		62017B812A743934005AE905 /* Component */ = {
+		0DAAD7912A743EA100BC23DB /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				62017B822A743968005AE905 /* Frame.swift */,
-				62017B832A743968005AE905 /* Navigator.swift */,
+				0DAAD7942A743EAF00BC23DB /* Navigator.swift */,
+				0DAAD7922A743EAA00BC23DB /* Frame.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		0DF6CFD52A7440F4007DF515 /* Ext+ */ = {
+			isa = PBXGroup;
+			children = (
+				0DF6CFD62A744106007DF515 /* CGSize+Ext.swift */,
+			);
+			path = "Ext+";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +286,12 @@
 			};
 			buildConfigurationList = 0DAAD74B2A73B3AE00BC23DB /* Build configuration list for PBXProject "Boinda_dreamLand" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "ko-KR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"ko-KR",
 			);
 			mainGroup = 0DAAD7472A73B3AE00BC23DB;
 			productRefGroup = 0DAAD7512A73B3AE00BC23DB /* Products */;
@@ -299,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DAAD75B2A73B3B000BC23DB /* Preview Assets.xcassets in Resources */,
+				0DF6CFDF2A746EF9007DF515 /* menu.svg in Resources */,
 				0DAAD7582A73B3B000BC23DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,14 +340,14 @@
 				0DAAD7902A74346300BC23DB /* HapticHelper.swift in Sources */,
 				0DAAD78B2A742D8D00BC23DB /* gorebab.mlmodel in Sources */,
 				0DAAD77E2A73B44400BC23DB /* CameraViewModel.swift in Sources */,
-				0DAAD7892A742C1C00BC23DB /* chapssal.mlmodel in Sources */,
 				0DAAD7562A73B3AE00BC23DB /* ContentView.swift in Sources */,
-				62017B852A743968005AE905 /* Navigator.swift in Sources */,
-				0DAAD7822A73B47B00BC23DB /* Dream.mlmodel in Sources */,
-				0DAAD78D2A742E8E00BC23DB /* gorechange.mlmodel in Sources */,
+				0DF6CFDB2A746832007DF515 /* coca.mlmodel in Sources */,
+				0DAAD7952A743EAF00BC23DB /* Navigator.swift in Sources */,
+				0DF6CFD72A744106007DF515 /* CGSize+Ext.swift in Sources */,
 				0DAAD7542A73B3AE00BC23DB /* Boinda_dreamLandApp.swift in Sources */,
+				0DF6CFD42A744069007DF515 /* SettingView.swift in Sources */,
 				0DAAD7842A73CEC100BC23DB /* ResultManager.swift in Sources */,
-				62017B842A743968005AE905 /* Frame.swift in Sources */,
+				0DAAD7932A743EAA00BC23DB /* Frame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

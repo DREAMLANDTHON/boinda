@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    let cameraVM = CameraViewModel()
+    @StateObject var resultManager = ResultManager.shared
+    
+    
     var body: some View {
-        VStack {
-            Spacer()
-//            Text("\(ViewController.string[0])")
-            ViewRepresenter()
+        NavigationStack {
+            VStack {
+                HStack {
+                    Spacer()
+                    NavigationLink {
+                        SettingView()
+                    } label: {
+                        Image("menu")
+                            .font(.system(size: 30))
+                            .foregroundColor(.white)
+                    }
+                    .accessibilityLabel("설정")
+                }.padding()
+                ZStack {
+                    ViewRepresenter()
+                        .accessibilityHidden(true)
+                    Frame().environmentObject(resultManager)
+                        .accessibilityHidden(true)
+                    Text("\(resultManager.resultObjectName)")
+                        .font(.system(size: 40))
+                        .accessibilityHint("햅틱이 느껴지면 한번 터치하세요")
+                }
+                Spacer()
+            }
         }
-        .ignoresSafeArea()
     }
 }
 
@@ -29,8 +52,4 @@ struct ViewRepresenter: UIViewRepresentable {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
