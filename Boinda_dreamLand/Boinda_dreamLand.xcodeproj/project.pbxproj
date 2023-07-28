@@ -14,6 +14,8 @@
 		0DAAD7652A73B3B000BC23DB /* Boinda_dreamLandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7642A73B3B000BC23DB /* Boinda_dreamLandTests.swift */; };
 		0DAAD76F2A73B3B000BC23DB /* Boinda_dreamLandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD76E2A73B3B000BC23DB /* Boinda_dreamLandUITests.swift */; };
 		0DAAD7712A73B3B000BC23DB /* Boinda_dreamLandUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7702A73B3B000BC23DB /* Boinda_dreamLandUITestsLaunchTests.swift */; };
+		0DAAD77E2A73B44400BC23DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD77D2A73B44400BC23DB /* ViewController.swift */; };
+		0DAAD7822A73B47B00BC23DB /* Dream.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7812A73B47B00BC23DB /* Dream.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		0DAAD76A2A73B3B000BC23DB /* Boinda_dreamLandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Boinda_dreamLandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DAAD76E2A73B3B000BC23DB /* Boinda_dreamLandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boinda_dreamLandUITests.swift; sourceTree = "<group>"; };
 		0DAAD7702A73B3B000BC23DB /* Boinda_dreamLandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boinda_dreamLandUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DAAD77D2A73B44400BC23DB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DAAD7812A73B47B00BC23DB /* Dream.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Dream.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 		0DAAD7522A73B3AE00BC23DB /* Boinda_dreamLand */ = {
 			isa = PBXGroup;
 			children = (
+				0DAAD7802A73B44D00BC23DB /* ViewController */,
+				0DAAD77F2A73B44900BC23DB /* View */,
 				0DAAD7532A73B3AE00BC23DB /* Boinda_dreamLandApp.swift */,
-				0DAAD7552A73B3AE00BC23DB /* ContentView.swift */,
+				0DAAD7812A73B47B00BC23DB /* Dream.mlmodel */,
 				0DAAD7572A73B3B000BC23DB /* Assets.xcassets */,
 				0DAAD7592A73B3B000BC23DB /* Preview Content */,
 			);
@@ -125,6 +131,22 @@
 				0DAAD7702A73B3B000BC23DB /* Boinda_dreamLandUITestsLaunchTests.swift */,
 			);
 			path = Boinda_dreamLandUITests;
+			sourceTree = "<group>";
+		};
+		0DAAD77F2A73B44900BC23DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0DAAD7552A73B3AE00BC23DB /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0DAAD7802A73B44D00BC23DB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0DAAD77D2A73B44400BC23DB /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DAAD77E2A73B44400BC23DB /* ViewController.swift in Sources */,
 				0DAAD7562A73B3AE00BC23DB /* ContentView.swift in Sources */,
+				0DAAD7822A73B47B00BC23DB /* Dream.mlmodel in Sources */,
 				0DAAD7542A73B3AE00BC23DB /* Boinda_dreamLandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
