@@ -34,7 +34,7 @@ class CameraViewModel: UIViewController, AVCaptureVideoDataOutputSampleBufferDel
             print("\(objectIdentifier)")
             count = 0
             HapticManager.shared.notification(type: .success)
-            resultManager.isDetacting = false
+            resultManager.isDetecting = false
         }
     }
     
@@ -46,7 +46,7 @@ class CameraViewModel: UIViewController, AVCaptureVideoDataOutputSampleBufferDel
         let request = VNCoreMLRequest(model: model) { (res, error) in
             guard let results = res.results as? [VNClassificationObservation] else { return }
             guard let observationData = results.first else { return }
-            if observationData.confidence > 0.9975, observationData.identifier == self.objectIdentifier, self.resultManager.isDetacting {
+            if observationData.confidence > 0.9975, observationData.identifier == self.objectIdentifier, self.resultManager.isDetecting {
                 self.count += 1
                 self.configObject()
             } else {
