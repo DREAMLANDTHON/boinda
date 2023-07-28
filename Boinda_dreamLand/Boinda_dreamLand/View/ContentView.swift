@@ -33,7 +33,7 @@ struct ContentView: View {
                         .accessibilityHidden(true)
                     Text("\(resultManager.resultObjectName)")
                         .font(.system(size: 40))
-                        .accessibilityHint("햅틱이 느껴지면 한번 터치하세요")
+                        .accessibilityHint("햅틱이 느껴지면 두번 탭하세요")
                 }
                 Spacer()
             }
