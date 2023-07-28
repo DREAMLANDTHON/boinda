@@ -10,11 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+            Spacer()
+            Text("\(ViewController.string[0])")
+            ViewRepresenter()
         }
-        .padding()
+        .ignoresSafeArea()
+    }
+}
+
+struct ViewRepresenter: UIViewRepresentable {
+    @StateObject var vc: ViewController = ViewController()
+    
+    func makeUIView(context: Context) -> some UIView {
+        return vc.view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
     }
 }
 

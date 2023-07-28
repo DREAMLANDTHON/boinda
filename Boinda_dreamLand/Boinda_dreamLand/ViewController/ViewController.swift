@@ -1,23 +1,15 @@
 //
 //  ViewController.swift
-//  ML Sample
+//  Boinda_dreamLand
 //
-//  Created by Ramprasath Selvam on 19/12/19.
-//  Copyright © 2019 Ramprasath Selvam. All rights reserved.
+//  Created by 송재훈 on 2023/07/28.
 //
-// Reach Me ⬇︎
-// Instagram - ramprasathselvam
-// LinkedIn - ramprasathselvam
-// FaceBook - ramprasathselvam
-// Twitter - @ramprasath7797
-// YouTube - https://www.youtube.com/channel/UCvCyA7vZwJI87YPFJFe2ypg/
 
 import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
     private var permissionGranted = false
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
 
@@ -35,9 +27,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         guard let pixBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         guard let model = try? VNCoreMLModel(for: Dream().model) else { return }
-        let request = VNCoreMLRequest(model: model) { (res, error) in
+        let request = VNCoreMLRequest(model: model) { [self] (res, error) in
             guard let results = res.results as? [VNClassificationObservation] else { return }
             guard let observationData = results.first else { return }
+            
             print(observationData.identifier, observationData.confidence)
         }
         try? VNImageRequestHandler(cvPixelBuffer: pixBuffer, options: [:]).perform([request])
@@ -80,8 +73,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         DispatchQueue.main.async {
             self.view.layer.addSublayer(previewLayer)
+            previewLayer.frame = self.view.frame
         }
-        previewLayer.frame = self.view.frame
         
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
