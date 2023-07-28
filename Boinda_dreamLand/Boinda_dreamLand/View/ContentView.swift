@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("\(ViewController.string[0])")
+//            Text("\(ViewController.string[0])")
             ViewRepresenter()
         }
         .ignoresSafeArea()
@@ -19,7 +19,7 @@ struct ContentView: View {
 }
 
 struct ViewRepresenter: UIViewRepresentable {
-    @StateObject var vc: ViewController = ViewController()
+    @StateObject var vc = CameraViewModel()
     
     func makeUIView(context: Context) -> some UIView {
         return vc.view

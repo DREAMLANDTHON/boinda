@@ -9,27 +9,49 @@ import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
+class CameraViewModel: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
     private var permissionGranted = false
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
+    let resultManager = ResultManager()
+    var count = 0
+    var objectIdentifier = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         checkPermission()
         
-        sessionQueue.async { [unowned self] in
-            guard permissionGranted else { return }
-            self.startCamera()
+        sessionQueue.async {
+            [unowned self] in
+                guard permissionGranted else { return }
+                self.startCamera()
         }
     }
+    
+    func configObject() {
+        if count > 7 {
+            resultManager.resultObjectName = objectIdentifier
+            print("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
+            print("\(objectIdentifier)")
+            count = 0
+            HapticManager.shared.notification(type: .success)
+            resultManager.isDetacting = false
+        }
+    }
+    
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
         guard let pixBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        guard let model = try? VNCoreMLModel(for: Dream().model) else { return }
-        let request = VNCoreMLRequest(model: model) { [self] (res, error) in
+        guard let model = try? VNCoreMLModel(for: gorebab(configuration: MLModelConfiguration()).model) else {return}
+        let request = VNCoreMLRequest(model: model) { (res, error) in
             guard let results = res.results as? [VNClassificationObservation] else { return }
             guard let observationData = results.first else { return }
+            if observationData.confidence > 0.9975, observationData.identifier == self.objectIdentifier, self.resultManager.isDetacting {
+                self.count += 1
+                self.configObject()
+            } else {
+                self.objectIdentifier = observationData.identifier
+            }
             
             print(observationData.identifier, observationData.confidence)
         }
