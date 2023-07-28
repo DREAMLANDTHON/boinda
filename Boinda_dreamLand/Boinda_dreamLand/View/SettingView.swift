@@ -2,12 +2,14 @@
 //  SettingView.swift
 //  Boinda_dreamLand
 //
+
 //  Created by 송재훈 on 2023/07/29.
 //
 
 import SwiftUI
 
 struct SettingView: View {
+
     let addedInfos: [String] = ["품목 유형", "총 내용량", "알레르기 성분", "비건 인증", "할랄 인증"]
     @State var addedInfosToggle: [Bool] = [false, false, false, false, false]
     
