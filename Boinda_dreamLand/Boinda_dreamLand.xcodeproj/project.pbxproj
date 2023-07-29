@@ -18,13 +18,15 @@
 		0DAAD7842A73CEC100BC23DB /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7832A73CEC100BC23DB /* ResultManager.swift */; };
 		0DAAD78B2A742D8D00BC23DB /* gorebab.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD78A2A742D8D00BC23DB /* gorebab.mlmodel */; };
 		0DAAD7902A74346300BC23DB /* HapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD78F2A74346300BC23DB /* HapticHelper.swift */; };
-
 		0DAAD7932A743EAA00BC23DB /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7922A743EAA00BC23DB /* Frame.swift */; };
 		0DAAD7952A743EAF00BC23DB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAD7942A743EAF00BC23DB /* Navigator.swift */; };
 		0DF6CFD42A744069007DF515 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF6CFD32A744069007DF515 /* SettingView.swift */; };
 		0DF6CFD72A744106007DF515 /* CGSize+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF6CFD62A744106007DF515 /* CGSize+Ext.swift */; };
 		0DF6CFDB2A746832007DF515 /* coca.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0DF6CFDA2A746832007DF515 /* coca.mlmodel */; };
 		0DF6CFDF2A746EF9007DF515 /* menu.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0DF6CFDE2A746EF8007DF515 /* menu.svg */; };
+		62C3B8172A74920B0090EBA7 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C3B8162A74920B0090EBA7 /* Color+Ext.swift */; };
+		62C3B8192A7493370090EBA7 /* Boinda-dreamLand-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62C3B8182A7492340090EBA7 /* Boinda-dreamLand-Info.plist */; };
+		62C3B81B2A74937C0090EBA7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C3B81A2A74937C0090EBA7 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,9 @@
 		0DF6CFD62A744106007DF515 /* CGSize+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Ext.swift"; sourceTree = "<group>"; };
 		0DF6CFDA2A746832007DF515 /* coca.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = coca.mlmodel; sourceTree = "<group>"; };
 		0DF6CFDE2A746EF8007DF515 /* menu.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menu.svg; sourceTree = "<group>"; };
+		62C3B8162A74920B0090EBA7 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		62C3B8182A7492340090EBA7 /* Boinda-dreamLand-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Boinda-dreamLand-Info.plist"; sourceTree = SOURCE_ROOT; };
+		62C3B81A2A74937C0090EBA7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 		0DAAD7522A73B3AE00BC23DB /* Boinda_dreamLand */ = {
 			isa = PBXGroup;
 			children = (
+				62C3B8182A7492340090EBA7 /* Boinda-dreamLand-Info.plist */,
 				0DF6CFD52A7440F4007DF515 /* Ext+ */,
 				0DAAD7852A73D15600BC23DB /* Model */,
 				0DAAD7802A73B44D00BC23DB /* ViewModel */,
@@ -160,6 +166,7 @@
 				0DAAD7552A73B3AE00BC23DB /* ContentView.swift */,
 				0DF6CFD32A744069007DF515 /* SettingView.swift */,
 				0DAAD7912A743EA100BC23DB /* Component */,
+				62C3B81A2A74937C0090EBA7 /* OnboardingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF6CFD62A744106007DF515 /* CGSize+Ext.swift */,
+				62C3B8162A74920B0090EBA7 /* Color+Ext.swift */,
 			);
 			path = "Ext+";
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C3B8192A7493370090EBA7 /* Boinda-dreamLand-Info.plist in Resources */,
 				0DAAD75B2A73B3B000BC23DB /* Preview Assets.xcassets in Resources */,
 				0DF6CFDF2A746EF9007DF515 /* menu.svg in Resources */,
 				0DAAD7582A73B3B000BC23DB /* Assets.xcassets in Resources */,
@@ -343,11 +352,13 @@
 				0DAAD77E2A73B44400BC23DB /* CameraViewModel.swift in Sources */,
 				0DAAD7562A73B3AE00BC23DB /* ContentView.swift in Sources */,
 				0DF6CFDB2A746832007DF515 /* coca.mlmodel in Sources */,
+				62C3B8172A74920B0090EBA7 /* Color+Ext.swift in Sources */,
 				0DAAD7952A743EAF00BC23DB /* Navigator.swift in Sources */,
 				0DF6CFD72A744106007DF515 /* CGSize+Ext.swift in Sources */,
 				0DAAD7542A73B3AE00BC23DB /* Boinda_dreamLandApp.swift in Sources */,
 				0DF6CFD42A744069007DF515 /* SettingView.swift in Sources */,
 				0DAAD7842A73CEC100BC23DB /* ResultManager.swift in Sources */,
+				62C3B81B2A74937C0090EBA7 /* OnboardingView.swift in Sources */,
 				0DAAD7932A743EAA00BC23DB /* Frame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,14 +517,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Boinda_dreamLand/Preview Content\"";
-				DEVELOPMENT_TEAM = YPDFZL299R;
+				DEVELOPMENT_ASSET_PATHS = "Boinda_dreamLand/Preview\\ Content";
+				DEVELOPMENT_TEAM = VA3J8597P8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Boinda-dreamLand-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "식품을 인식하기 위해 카메라가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,14 +547,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Boinda_dreamLand/Preview Content\"";
-				DEVELOPMENT_TEAM = YPDFZL299R;
+				DEVELOPMENT_ASSET_PATHS = "Boinda_dreamLand/Preview\\ Content";
+				DEVELOPMENT_TEAM = VA3J8597P8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Boinda-dreamLand-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "식품을 인식하기 위해 카메라가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

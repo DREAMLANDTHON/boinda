@@ -8,38 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("onboarding") var isOnboarindViewActive: Bool = true
     let cameraVM = CameraViewModel()
     @StateObject var resultManager = ResultManager.shared
     
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                HStack {
-                    Spacer()
-                    NavigationLink {
-                        SettingView()
-                    } label: {
-                        Image("menu")
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
+        if isOnboarindViewActive {
+            OnboardingView()
+        }
+        else {
+            NavigationStack {
+                VStack {
+                    HStack {
+                        Spacer()
+                        NavigationLink {
+                            SettingView()
+                        } label: {
+                            Image("menu")
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                        }
+                        .accessibilityLabel("설정")
+                    }.padding()
+                    ZStack {
+                        ViewRepresenter()
+                            .accessibilityHidden(true)
+                        Frame().environmentObject(resultManager)
+                            .accessibilityHidden(true)
+                        Text("\(resultManager.resultObjectName)")
+                            .font(.system(size: 40))
+                            .accessibilityHint("햅틱이 느껴지면 두번 탭하세요")
                     }
-                    .accessibilityLabel("설정")
-                }.padding()
-                ZStack {
-                    ViewRepresenter()
-                        .accessibilityHidden(true)
-                    Frame().environmentObject(resultManager)
-                        .accessibilityHidden(true)
-                    Text("\(resultManager.resultObjectName)")
-                        .font(.system(size: 40))
-                        .accessibilityHint("햅틱이 느껴지면 두번 탭하세요")
+                    Spacer()
                 }
-                Spacer()
             }
         }
     }
 }
+
 
 struct ViewRepresenter: UIViewRepresentable {
     @StateObject var vc = CameraViewModel()
