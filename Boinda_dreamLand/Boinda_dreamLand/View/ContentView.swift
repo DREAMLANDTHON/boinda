@@ -36,9 +36,17 @@ struct ContentView: View {
                             .accessibilityHidden(true)
                         Frame().environmentObject(resultManager)
                             .accessibilityHidden(true)
+                        
                         Text("\(resultManager.resultObjectName)")
                             .font(.system(size: 40))
+                            .foregroundColor(Color.GB)
                             .accessibilityHint("햅틱이 느껴지면 두번 탭하세요")
+                            .padding()
+                            .background {
+                                RoundedRectangle(cornerRadius: 14)
+                                    .fill(Color.BG)
+                            }
+                            .frame(maxHeight: .infinity, alignment: .bottom)
                     }
                     Spacer()
                 }

@@ -42,15 +42,15 @@ struct SettingView: View {
                 }
 
                 if allergy {
-                    LazyVGrid(columns: allergyGrid, alignment: .leading, spacing: 0) {
+                    LazyVGrid(columns: allergyGrid, alignment: .leading, spacing: 2) {
                         ForEach(0..<allergyList.count) { idx in
                             Text(allergyList[idx])
                                 .font(.system(size: 12))
-                                .foregroundColor(allergyListToggle[idx] ? .white : .black)
-                                .padding(7)
+                                .foregroundColor(allergyListToggle[idx] ? Color.BG : Color.off)
+                                .padding(6)
                                 .background {
                                     RoundedRectangle(cornerRadius: 20)
-                                        .fill(allergyListToggle[idx] ? Color.black : Color.white)
+                                        .fill(allergyListToggle[idx] ? Color.primary : Color.clear)
                                 }
                                 .onTapGesture {
                                     allergyListToggle[idx].toggle()
